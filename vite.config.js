@@ -8,10 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  base: "/happy-birthday",
-  server:{
-    headers:{
-      'Content-Security-Policy': "default-src 'self'; font-src 'self' https://fonts.gstatic.com;",
-    }
-  }
+  base: process.env.VITE_BASE_PATH || "/happy-birthday",
 })
