@@ -27,7 +27,7 @@ const App = () => {
     <div className='flex-row justify-center items-center w-full h-auto bg-[url("/sunflower_3.jpg")] bg-cover bg-center bg-fixed'>
       <div className='absolute w-full h-screen'>
         <DotLottieReact
-          src='/confetti.lottie'
+          src='/happy-birthday/confetti.lottie'
           dotLottieRefCallback={dotLottieRefCallback}
           renderConfig={{
             freezeOnOffscreen: false
@@ -50,7 +50,7 @@ const App = () => {
       <div className='flex justify-center items-center w-full h-screen'>
         <div className='absolute w-full h-full top-28 hidden md:block'>
           <DotLottieReact
-            src="/heart.lottie"
+            src="/happy-birthday/heart.lottie"
             loop
             autoplay
           />

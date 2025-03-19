@@ -1,19 +1,13 @@
-import React, { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'motion/react'
+import React from 'react'
+import { motion, useTransform } from 'motion/react'
 import Reveal from './Reveal';
 
 const Card = ({ index, texts, color, progress, range, targetScale }) => {
 
-  const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start end', 'start start']
-  })
-
   const scale = useTransform(progress, range, [1, targetScale])
 
   return (
-    <div ref={container} className='flex justify-center items-center w-full h-screen sticky top-0'>
+    <div className='flex justify-center items-center w-full h-screen sticky top-0'>
       <motion.div
         className='flex w-4/5 h-5/7 rounded-3xl relative'
         style={{ backgroundColor: color, top: `calc(-5% + ${index * 25}px)`, scale }}

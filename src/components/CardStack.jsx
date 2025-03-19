@@ -12,7 +12,7 @@ const CardStack = () => {
   })
 
   return (
-    <motion.div ref={container} className='flex flex-col justify-center items-center w-full h-auto relative'>
+    <motion.div ref={container} className='relative flex flex-col justify-center items-center w-full h-auto'>
         {
           messages.map((message, index) => {
             const targetScale = 1 - ((messages.length - index) * 0.05);
