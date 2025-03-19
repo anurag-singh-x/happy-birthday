@@ -5,7 +5,6 @@ import { useState } from 'react'
 import { CakeIcon } from '@heroicons/react/16/solid'
 import CardStack from './components/CardStack'
 import Spotify from './components/Spotify'
-import { songs } from './data'
 import Reveal from './components/Reveal'
 
 const App = () => {
@@ -48,13 +47,6 @@ const App = () => {
         <CakeIcon className='size-8' />
       </motion.button>
       <div className='flex justify-center items-center w-full h-screen'>
-        <div className='absolute w-full h-full top-28 hidden md:block'>
-          <DotLottieReact
-            src="/happy-birthday/heart.lottie"
-            loop
-            autoplay
-          />
-        </div>
         <div className='text-center'>
           <p className='text-yellow-500 dancing-script-font text-6xl md:text-7xl lg:text-8xl xl:text-9xl mix-blend-difference'>
             {"Happy Birthday!".split("").map((char, index) => (
@@ -75,17 +67,7 @@ const App = () => {
             ))}
           </p>
           <p className='text-yellow-500 dancing-script-font text-9xl mix-blend-hard-light imperial-script-regular'>
-            {"Khushi".split("").map((char, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.2, duration: 0.3 }}
-                className="inline-block"
-              >
-                {char}
-              </motion.span>
-            ))}
+            Khushi
           </p>
         </div>
       </div>
