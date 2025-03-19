@@ -31,6 +31,7 @@ const App = () => {
           renderConfig={{
             freezeOnOffscreen: false
           }}
+          className='h-full w-auto'
         />
       </div>
       <motion.button
@@ -41,7 +42,7 @@ const App = () => {
           height: 75,
           borderRadius: "50%",
         }}
-        className='flex justify-center items-center absolute bottom-10 right-10 z-2 bg-yellow-600'
+        className='justify-center items-center absolute bottom-10 right-10 z-2 bg-yellow-600 hidden md:flex'
         onClick={play}
       >
         <CakeIcon className='size-8' />
